@@ -11,7 +11,7 @@
    
 }
 
-.display-4 {
+h1 {
     font-size: 60px;
     color:white;
 }
@@ -71,7 +71,7 @@ input { font-family: 'FontAwesome'; } /* This is for the placeholder */
  }
 
  ul {
-   padding:10px;
+   padding:0px;
  }
 
  ul li {
@@ -80,6 +80,10 @@ input { font-family: 'FontAwesome'; } /* This is for the placeholder */
 
  h4{
    padding:10px;
+ }
+
+ .cardly li{
+   padding:15px;
  }
 
 /* ######################################################## */
