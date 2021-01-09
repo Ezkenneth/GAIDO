@@ -42,11 +42,17 @@ fetch(req)
 .then( (jsonData) =>{
         var resData = (jsonData)
         console.log(resData);
-
-        for ( i = 0; i < resData.restaurants.length; i++){
-            console.log(resData.restaurants[i].restaurant.name)
-        }
         
+        var carTest = document.createElement("div");
+        carTest.addClass("row, small-up-2, medium-up-3, large-up-6")
+        
+        
+
+        // for ( i = 0; i < resData.restaurants.length; i++){
+        //     return(resData.restaurants[i].restaurant.name)
+           
+        // }
+      
        
 
         
@@ -56,6 +62,13 @@ fetch(req)
 })
 
 
+{/* <div class="row small-up-2 medium-up-3 large-up-6">
+      <div class="column">
+        <img class="thumbnail" src="https://placehold.it/300x400">
+        <h5>Nulla At Nulla Justo, Eget</h5>
+        <p>$400</p>
+        <a href="#" class="button small expanded hollow">Buy</a>
+      </div> */}
 
 
 // var newVar = ""
