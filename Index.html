@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GΛIDØ Home</title>
+    <script src="https://kit.fontawesome.com/15181efa86.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+    <link rel="stylesheet" href="/Assets/CSS/stylesheet.css">
+    <link rel="stylesheet" href="/Assets/CSS/header.css">
+    <!-- <link rel="stylesheet" href="call.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <section class="hero is-medium">
+        <div class="hero-head">
+            <div>
+                <div class="topnav" id="myTopnav">
+                    <a href="test.html" class="active">Home</a>
+                    <a href="night-spots.html" class="">
+                        Night Spots
+                    </a>
+                    </a>
+                    <a href="collections.html" class="">
+                        Collections
+                    </a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-body food-img">
+
+            <h2 class="subtitle">
+                GΛIDØ
+            </h2>
+            <form>
+                <div class="input-container">
+                    <i class="fa fa-map-marker icon"></i>
+                    <input type="text" placeholder="Where? Here? There? Anywhere." id="input"
+                        class="input-field place wrapper inputValue">
+                    </input>
+                </div>
+                <button type="button" class="btn btn-centre userClick">Search Location</button>
+            </form>
+
+        </div>
+        <section class="blog-posts">
+            <div class="container">
+                <div class="columns">
+                    <div class="column is-10 is-offset-1">
+                        <div class="columns featured-post is-multiline">
+                            <div class="column is-12 post">
+                                <article class="columns featured">
+                                    <div class="column is-7 post-img ">
+                                        <br>
+                                        <img src="/Assets/IMGS/foodie.img" alt="">
+                                    </div>
+                                    <!-- <div class="cardio"> -->
+                                    <div class="column is-5 featured-content va">
+                                        <div><br>
+                                            <h3 class="heading post-category">FOOD</h3>
+                                            <h1 class="title post-title">Restaurants Near You</h1>
+                                            <p class="post-excerpt">This template is based off of the official default
+                                                blog
+                                                template created by the fine folks over at <a
+                                                    href="https://ghost.io">Ghost</a>.
+                                                If you are looking for a fully
+                                                featured blog platform, I highly recommend checking them out!</p>
+                                            <br>
+                                            <div class="button-section" id="browse">
+                                                <button class="go-button button is-success">Browse</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- </div> -->
+                                </article>
+                            </div>
+                        </div>
+                        <!-- </div> -->
+                        <div class="cardio"></div>
+                        <br>
+                        <br>
+                        <section class="container">
+                            <div class="columns features">
+                                <div class="column is-4">
+                                    <div class="card is-shady">
+                                        <div class="card-image">
+                                            <figure class="image is-4by3">
+                                                <img src="/Assets/IMGS/conde.jpg" alt="Placeholder image"
+                                                    class="modal-button" data-target="modal-image2">
+                                            </figure>
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="content">
+                                                <h4>Night Spots</h4>
+                                                <p>Near Me</p>
+                                                <span class="button is-success modal-button"
+                                                    data-target="modal-image2">Explore</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-4">
+                                    <div class="card is-shady">
+                                        <div class="card-image">
+                                            <figure class="image is-4by3">
+                                                <img src="/Assets/IMGS/trend.jpg" alt="Placeholder image">
+                                            </figure>
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="content">
+                                                <h4>Trending</h4>
+                                                <p>Whats' Trending ?</p>
+                                                <span class="button is-success modal-button"
+                                                    data-target="modal-card">Explore</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-4 modal-button" data-target="modal-image">
+                                    <div class="card is-shady">
+                                        <div class="card-image">
+                                            <figure class="image is-4by3">
+                                                <img src="/Assets/IMGS/gaido.jpeg" alt="Placeholder image">
+                                            </figure>
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="content">
+                                                <h4>Collections</h4>
+                                                <p>Highly Rated</p>
+                                                <span class="button is-success modal-button"
+                                                    data-target="modal-image">Explore</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        </div>
+        <footer class="footer">
+            <div class="content has-text-centered">
+                <p>
+                    <strong class="footer-name">GΛIDØ &copy;2021</strong>
+            </div>
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+        <script src="/Assets/JS/header.js" type="text/javascript"></script>
+        <script src="/Assets/JS/citySearch.js"></script>
+       
+        <script src="/Assets/JS/header.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</body>
+
+</html>

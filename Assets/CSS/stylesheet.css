@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&family=Nunito+Sans:wght@400;600&display=swap');
+
+.va {
+  display: flex;
+  align-items: center;
+}
+
+html {
+  font-family: 'Nunito Sans', sans-serif;
+  color: white;
+}
+
+a {
+  color: #3b7adf;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #3b7adf;
+}
+
+hr {
+  background: #24272c;
+}
+
+.hero {
+  background: #060606;
+}
+
+.title,
+.subtitle {
+  color: white;
+}
+
+.navbar .navbar-item {
+  color: #e4e2ff;
+}
+
+.navbar .navbar-item.is-active {
+  color: #e4e2ff;
+  font-weight: 700;
+}
+
+.navbar .navbar-item:hover {
+  background: transparent;
+  color: white;
+}
+
+.navbar .navbar-item a {
+  margin-left: 1rem;
+  color: #e4e2ff;
+}
+
+.blog-posts {
+  background: #191b1f;
+  padding-top: 4rem;
+  padding-bottom: 10rem;
+}
+
+.blog-posts article {
+  padding: 1.5rem;
+}
+
+.blog-posts .post img {
+  border-radius: 6px;
+}
+
+.blog-posts .post .post-category {
+  color: #3b7adf;
+}
+
+.blog-posts .post .post-title {
+  font-size: 2.2rem;
+}
+
+.blog-posts .post .post-excerpt {
+  line-height: 1.5rem;
+  letter-spacing: .03rem;
+  font-size: 1.2rem;
+  font-family: 'IBM Plex Serif', serif;
+  color: #92a3ab;
+}
+
+.blog-posts .post .featured .featured-image img {
+  height: 380px;
+}
+
+.pointer{
+    cursor: pointer;
+  }
+  
+.icon {
+    padding: 10px;
+    background: crimson;
+    color: white;
+    min-width: 50px;
+    min-height: 50px;
+    text-align: center;
+    
+  }
+  
+.input-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+    
+  }
+  
+.input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+  }
+  
+.input-field:focus {
+    border: 2px solid dodgerblue;
+  }
+  
+.btn { 
+    background: crimson;
+    margin:10px;
+    color:white;
+    padding:5px;
+  }
+
+.btn:hover{
+    background-color:orange;
+  }
+ 
+.food-img{
+    background-image: url(/Assets/IMGS/jumbo.jpg);
+    background-size: 100%;
+    background-position: top;
+    position: relative;
+    background-repeat: no-repeat;
+  }
+
+  .subtitle{
+    text-align: center;
+  }
+
+  .btn-centre{
+    margin: 10px auto;
+    display: block;
+    width: 20%;
+    height: 50px;
+  }
+
+  .subtitle{
+    font-size: 55px;
+  }
+
+  .footer{
+    background-color: #060606;
+  }
+
+  .footer-name{
+    color: white;
+  }
+  
+  .text-centered{
+    text-align: center;
+    color: white;
+    font-size: x-large;
+  }
