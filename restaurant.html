@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/15181efa86.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/ghost-blog.css">
+    <link rel="stylesheet" href="/Assets/CSS/stylesheet.css">
+    <link rel="stylesheet" href="/Assets/CSS/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title></title>
+</head>
+<body>
+        <section class="hero is-medium">
+          <div class="hero-head">
+            <div>
+                <div class="topnav" id="myTopnav">
+                    <a href="test.html" class="active">Home</a>
+                    <a  href="night-spots.html" class="">
+                        Night Spots
+                      </a>
+                    </a>
+                    <a href="collections.html" class="">
+                        Collections
+                    </a>
+                    <a href="trending.html" class="">
+                        Trending
+                    </a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                      <i class="fa fa-bars"></i>
+                    </a>
+                  </div>
+            </div>
+          </div>
+          
+          <div class="hero-body" style="color:white;">
+            <div class ="resCard"></div>
+              
+            <!-- <h3>
+                  Content coming soon...
+              </h3>
+              <p>Coming soon...</p> -->
+          
+             
+         </div>
+        
+      
+        </section> 
+        <footer class="footer">
+          <div class="content has-text-centered">
+            <p>
+              <strong class="footer-name">GΛIDØ &copy;2021</strong> 
+          </div>
+        </footer>
+        <script src="/Assets/JS/header.js" type="text/javascript"></script>
+        <script>
+              $(document).ready(function () {
+              var restaurant = $(this).attr("data-person");
+  
+              var inputValue = document.querySelector('.inputValue')
+  
+  
+              function userAction() {
+  
+                  let box = [];
+                  // async function getRestaurants() {
+                  let url1 = "https://developers.zomato.com/api/v2.1/search?lat=34.052235&lon=-118.243683&category=3";
+                  let url2 = "https://developers.zomato.com/api/v2.1/search?entity_id=295&entity_type=city";
+                  let url3 = "https://developers.zomato.com/api/v2.1/search?count=50&lat=40.2861946111111&lon=-97.6772406111111&radius=50M&sort=real_distance&order=asc";
+                  var resUrl = "https://developers.zomato.com/api/v2.1/restaurant?res_id=16663252"
+                  let h = new Headers();
+  
+  
+  
+                  h.append('Accept', 'application/json')
+                  h.append('user-key', '578d0d78d47f16ab2fd8efe3a7794df5')
+                  let req = new Request(resUrl, {
+                      method: 'GET',
+                      headers: h,
+                      mode: 'cors'
+                  });
+                  fetch(req).then(function (response) {
+                      return response.json();
+                  }).then(function (jsonData) {
+                      var resData = (jsonData);
+                      console.log(resData);
+                      console.log(resData.R);
+
+                      var name = resData.name
+                      console.log(name)
+                    //   $.each(resData, function (index, value) {
+                    //       console.log(value)
+                    //       var name = value.restaurant.name;
+                    //       console.log(name);
+                          var city = resData.location.city;
+                          console.log(city);
+                          var rating = resData.user_rating.aggregate_rating;
+                          console.log(rating)
+                          var cuisine = resData.cuisines;
+                          console.log(cuisine);
+                          var image = resData.thumb;
+                          console.log(image);
+                          var featImg = resData.featured_image
+                          console.log(featImg)
+                          var price = resData.average_cost_for_two;
+                          console.log(price);
+                          
+                          var contact = resData.phone_numbers;
+                          console.log(contact);
+                          var visit = resData.menu_url;
+  
+                    //       // $('.name').text(name);
+                    //       // $('.city').text(city);
+                          
+  
+                    //       // $('.card').append('<h3 class="name">' + name + '</h3><p class="city">' + city + '</p><hr>');
+                          $('.resCard').append(`
+                      <br>
+                     
+                      <div class="container">
+        <div class="columns">
+          <div class="column is-10 is-offset-1">
+            <div class="columns featured-post is-multiline">
+              <div class="column is-12 post">
+                <article class="columns featured">
+                  <div class="column is-7 post-img ">
+                    <img src="${featImg}" alt="">
+                  </div>
+                  <div class="column is-5 featured-content va">
+                    <div>                       
+                      <h3 class="heading post-category">${city}</h3>
+                      <h1 class="title post-title">${name}</h1>
+                      <p class="post-excerpt">${rating}</p>
+                      <br>
+                      <a href="${visit}" class="button is-primary">${name}</a>
+                    </div>
+                    <a href="maptest.html" class="button is-secondary">Visit this Restaurant</a>
+                    </div>
+
+                          
+                     
+                    
+                      `);
+  
+                    //   })
+  
+                  });
+              }
+  
+              userAction();
+          })
+          </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+</body>
+</html>
