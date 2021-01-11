@@ -20,7 +20,7 @@
 
 
             h.append('Accept', 'application/json')
-            h.append('user-key', '578d0d78d47f16ab2fd8efe3a7794df5')
+            h.append('user-key', 'f645d0cea8ceba7e089ecf510192d4fa')
             let req = new Request(urlCity, {
                 method: 'GET',
                 headers: h,
@@ -104,3 +104,4 @@
 
         userAction();
     })
+    // 578d0d78d47f16ab2fd8efe3a7794df5
