@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Inserting font awesome CSS -->
     <script src="https://kit.fontawesome.com/15181efa86.js" crossorigin="anonymous"></script>
+    <!-- Inserting Bulma CDN link  -->
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
-    <link rel="stylesheet" type="text/css" href="../css/ghost-blog.css">
+    <!-- Linking Stylesheets -->
     <link rel="stylesheet" href="/Assets/CSS/stylesheet.css">
     <link rel="stylesheet" href="/Assets/CSS/header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -16,6 +18,7 @@
         <section class="hero is-medium">
           <div class="hero-head">
             <div>
+               <!-- Navbar -->
                 <div class="topnav" id="myTopnav">
                     <a href="test.html" class="active">Home</a>
                     <a  href="night-spots.html" class="">
@@ -28,6 +31,7 @@
                     <a href="trending.html" class="">
                         Trending
                     </a>
+                    <!-- Function to enable navbar responsiveness -->
                     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                       <i class="fa fa-bars"></i>
                     </a>
@@ -38,27 +42,28 @@
           <div class="hero-body" style="color:white;">
             <div class ="resCard"></div>
               
-            <!-- <h3>
-                  Content coming soon...
-              </h3>
-              <p>Coming soon...</p> -->
+           
           
              
          </div>
         
       
         </section> 
+        <!-- Footer of page -->
         <footer class="footer">
           <div class="content has-text-centered">
             <p>
               <strong class="footer-name">GΛIDØ &copy;2021</strong> 
           </div>
         </footer>
+        <!-- Linking javascript -->
         <script src="/Assets/JS/header.js" type="text/javascript"></script>
-        <script>
+       <!-- Javascript for API call -->
+       <script>
               $(document).ready(function () {
               var restaurant = $(this).attr("data-person");
   
+            //  Logs input value from search form 
               var inputValue = document.querySelector('.inputValue')
   
   
@@ -74,26 +79,29 @@
   
   
   
+                //  Setting header values
                   h.append('Accept', 'application/json')
                   h.append('user-key', '578d0d78d47f16ab2fd8efe3a7794df5')
+                //  Creating variable for requests 
                   let req = new Request(resUrl, {
                       method: 'GET',
                       headers: h,
                       mode: 'cors'
                   });
+                  // Using a fetch request to grab data 
                   fetch(req).then(function (response) {
                       return response.json();
+                      // Then promises starts off new function
                   }).then(function (jsonData) {
+                    // Logging API response in a variable
                       var resData = (jsonData);
+                      // Logging above variable
                       console.log(resData);
                       console.log(resData.R);
 
                       var name = resData.name
                       console.log(name)
-                    //   $.each(resData, function (index, value) {
-                    //       console.log(value)
-                    //       var name = value.restaurant.name;
-                    //       console.log(name);
+                   
                           var city = resData.location.city;
                           console.log(city);
                           var rating = resData.user_rating.aggregate_rating;

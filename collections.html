@@ -6,8 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GΛIDØ Collections</title>
+  <!-- Inserting font awesome CSS -->
+  <!-- Inserting Bulma CDN link  -->
   <script src="https://kit.fontawesome.com/15181efa86.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+   <!-- Linking Stylesheets -->
   <link rel="stylesheet" href="/Assets/CSS/stylesheet.css">
   <link rel="stylesheet" href="/Assets/CSS/header.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -17,6 +20,7 @@
   <section class="hero is-medium">
     <div class="hero-head">
       <div class="">
+         <!-- Navbar -->
         <div class="topnav" id="myTopnav">
           <a href="index.html">Home</a>
           <a href="night-spots.html" class="">
@@ -26,9 +30,7 @@
           <a href="collections.html" class="active">
             Collections
           </a>
-          <!-- <a href="trending.html" class="">
-                Trending
-            </a> -->
+          <!-- Function to enable navbar responsiveness -->
           <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
           </a>
@@ -42,6 +44,7 @@
         GΛIDØ
       </h2>
       <form>
+        <!-- Search Bar -->
         <div class="input-container">
           <i class="fa fa-map-marker icon"></i>
           <input type="text" placeholder="What are you looking for?" id="input"
@@ -56,6 +59,7 @@
     </div>
   </section>
   <section class="blog-posts">
+    <!-- Main column content IMG -->
     <h1 class="text-centered">Cravings & Callings</h1>
     <div class="container">
       <div class="columns">
@@ -68,6 +72,7 @@
                 </div>
                 <div class="column is-5 featured-content va">
                   <div>
+                    <!-- <Main column content TXT"> -->
                     <h3 class="heading post-category">Collections</h3>
                     <h1 class="title post-title">Carefully Curated, Creatively Crafted.</h1>
                     <p class="post-excerpt">We've got a great culinary collection with cuisines to sate all. If you are
@@ -82,110 +87,25 @@
             </div>
           </div>
           <hr>
+           <!-- Div to hold appended files from collectSearch.JS -->
           <div class="collect"></div>
 
         </div>
       </div>
 
   </section>
+  <!-- Footer of page -->
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
         <strong class="footer-name">GΛIDØ &copy;2021</strong>
     </div>
   </footer>
-  <script src="/Assets/JS/header.js" type="text/javascript"></script>
+  
+  <!-- Linking JQuery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-
-  <!-- <script>
-          // $("button").on("click", function () {
-            $(document).ready(function () {  
-            var restaurant = $(this).attr("data-person");
-  
-              var inputValue = document.querySelector('.inputValue')
-  
-  
-              function userAction() {
-  
-                  let box = [];
-                  // async function getRestaurants() {
-                  let url1 = "https://developers.zomato.com/api/v2.1/search?lat=34.052235&lon=-118.243683&category=3";
-                  let url2 = "https://developers.zomato.com/api/v2.1/search?entity_id=295&entity_type=city";
-                  let url3 = "https://developers.zomato.com/api/v2.1/search?count=50&lat=40.2861946111111&lon=-97.6772406111111&radius=50M&sort=real_distance&order=asc";
-                  var urlCollect = "https://developers.zomato.com/api/v2.1/collections?city_id=280"
-                  let h = new Headers();
-  
-  
-  
-                  h.append('Accept', 'application/json')
-                  h.append('user-key', '578d0d78d47f16ab2fd8efe3a7794df5')
-                  let req = new Request(urlCollect, {
-                      method: 'GET',
-                      headers: h,
-                      mode: 'cors'
-                  });
-                  fetch(req).then(function (response) {
-                      return response.json();
-                  }).then(function (jsonData) {
-                      var resData = (jsonData);
-                      console.log(resData);
-                      console.log(resData.collections);
-                      $.each(resData.collections, function (index, value) {
-                          console.log(value)
-                          var name = value.collection.title;
-                          console.log(name);
-                          var desc = value.collection.description;
-                          console.log(desc);
-                          var share = value.collection.share_url;
-                          console.log(share)
-                          var link = value.collection.url
-                          console.log(link)
-                          // var cuisine = value.restaurant.cuisines;
-                          // console.log(cuisines);
-                          var image = value.collection.image_url;
-                          console.log(image);
-                          // var price = value.restaurant.average_cost_for_two;
-                          // console.log(price);
-                          // console.log(contact);
-                          // var contact = value.restaurant.phone_numbers;
-                          // var visit = value.restaurant.menu_url;
-  
-                          // $('.name').text(name);
-                          // $('.city').text(city);
-  
-                          // $('.card').append('<h3 class="name">' + name + '</h3><p class="city">' + city + '</p><hr>');
-                          $('.collect').append(`
-                      <br>
-                     
-                      <div class="column post is-4 flipper rig">
-                          <div class="tile">
-                              <article class="column is-multiline">
-                                  <div class="column is-12 post-img">
-                                      <img src="${image}" alt="Featured Image">
-                                  </div>
-                                  <div class="column is-12 featured-content ">
-                                      <h3 class="heading post-category">${desc}</h3>
-                                      <h1 class="title post-title">${name}</h1>
-                                      
-                                      <p class="post-excerpt">${share}</p>
-                                      <br>
-                                      <a href="${link}" class="button is-primary">Take a peek</a>
-                                  </div>
-                              </article>
-                          </div> 
-                      </div>
-                    
-                      `);
-  
-                      })
-  
-                  });
-              }
-  
-              userAction();
-          })
-          </script> -->
+  <!-- Linking Javascript files -->
+  <script src="/Assets/JS/header.js" type="text/javascript"></script>
   <script src="/Assets/JS/collectSearch.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
