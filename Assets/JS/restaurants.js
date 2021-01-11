@@ -8,6 +8,7 @@ $("button").on("click", function () {
         let url1 = "https://developers.zomato.com/api/v2.1/search?lat=34.052235&lon=-118.243683&category=3";
         let url2 = "https://developers.zomato.com/api/v2.1/search?entity_id=295&entity_type=city";
         let url3 = "https://developers.zomato.com/api/v2.1/search?count=50&lat=40.2861946111111&lon=-97.6772406111111&radius=50M&sort=real_distance&order=asc";
+        let urlResPage = "https://developers.zomato.com/api/v2.1/restaurant?res_id="+ value.value +""
         let h = new Headers();
 
         h.append('Accept', 'application/json')
