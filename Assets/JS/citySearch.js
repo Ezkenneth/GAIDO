@@ -21,7 +21,7 @@
     
     
                     h.append('Accept', 'application/json')
-                    h.append('user-key', '578d0d78d47f16ab2fd8efe3a7794df5')
+                    h.append('user-key', 'f645d0cea8ceba7e089ecf510192d4fa')
                     let req = new Request(urlCity, {
                         method: 'GET',
                         headers: h,
@@ -67,6 +67,8 @@
                                 var visit = value.restaurant.menu_url;
                                 var reviews = value.restaurant.highlights
                                 console.log(reviews)
+                                var res_id = value.restaurant.R.res_id
+                                console.log(res_id)
     
                                 $('.cardio').append(`
     <br>
@@ -84,7 +86,7 @@
             <p class="post-excerpt">${contact}</p>
             <p class="post-excerpt">What to expect? ${reviews.slice(1, 5)}</p>
             <br>
-            <a href="restaurant.html" class="button is-primary">${name}</a>
+            <a href="restaurant.html" class="button is-primary resClick">${name}</a>
         </div>
     </article>
     </div> 
