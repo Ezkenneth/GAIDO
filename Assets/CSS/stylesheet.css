@@ -128,7 +128,7 @@ hr {
   }
  
 .food-img{
-    background-image: url(/Assets/IMGS/jumbo.jpg);
+    background-image: url(../imgs/jumbo.jpg);
     background-size: 100%;
     background-position: top;
     position: relative;
