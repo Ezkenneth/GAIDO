@@ -1,0 +1,109 @@
+
+.jumbotron {
+    /* margin: 50px; */
+    max-width:100%;
+    background:darkgray;
+    padding:50px;
+    background-image:url("jumbo.jpg");
+    background-size:cover;
+    height:400px;
+    /* border-radius: 1px solid red; */
+    @media only screen and (max-width: 600px) {height: 200px;}
+    @media only screen and (min-width: 600px) {height: 300px;}
+    @media only screen and (min-width: 768px) {height: 400px;}
+
+   
+}
+
+.display-4 {
+    font-size: 60px;
+    color:white;
+}
+
+/* .place { */
+    /* width:450px; */
+    /* margin: 10px auto; */
+    /* padding: 10px; */
+    /* border-radius: 9px; */
+    /* border: 0px; */
+/* } */
+
+.wrapperinput[type="text"] {
+  position: relative; 
+}
+
+input { font-family: 'FontAwesome'; } /* This is for the placeholder */
+
+.wrapper:before {
+  font-family: 'FontAwesome';
+  color:red;
+  position: relative;
+  left: -5px;
+  content: "&#61442";
+}
+
+ .btn { 
+ background: crimson;
+ margin:10px;
+ color:white;
+ padding:5px;
+ }
+
+ .btn:hover{
+   background-color:orange;
+ }
+
+ #input {
+   margin-right:10px 50px;
+ }
+
+ /*################### top cities for card ######### */
+ .wrap {
+   /* text-align: center; */
+  
+ }
+
+
+ .card {
+   /* float:left; */
+   /* text-align:center; */
+   padding:5px ;
+   margin-left:0px;
+   padding-bottom:20px;
+   max-width:200px;
+   /* max-width:200px; */
+ }
+
+ ul {
+   padding:10px;
+ }
+
+ ul li {
+  list-style-type: none;
+ }
+
+ h4{
+   padding:10px;
+ }
+
+ /* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+/* ######################################################## */
