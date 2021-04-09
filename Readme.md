@@ -41,7 +41,7 @@
 
 ### Live Screenshots
 
-![Live GAIDO App](Assets/screenshots/Capture.PNG)
+![Live GAIDO App](Assets\Screenshots\Capture.PNG)
 ![Live GAIDO app](Assets/screenshots/Capture1.PNG)
 
 ### Contributions 
